@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>一公里社区</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+	<div class="ios-desktop" id="iosdesktop" style="display:none;">
+		<div class="ios-tips">
+			<img src="images/iosdesktop.png">
+		</div>
+	</div>
+
+    <div class="jumbotron onekm-jumbotron">
+		<div class="container top-details">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-logo">
+					<img src="images/index_logo.png">
+					<p>一个有温度的生活社区</p>
+				</div>
+          
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-search">
+					<div class="input-group">
+						<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="在这里找到你所要的商铺">
+						<div class="input-group-btn">
+							<button class="btn btn-default" type="button">
+								<i class="iconfont">&#xe615;</i>
+							</button>
+						</div><!-- /btn-group -->
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-local">
+					<p>
+						<a href="#"><i class="iconfont">&#xe600;</i>获取我所在的位置</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="row index-service">
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 index-service-icon">
+					<a href="retail_index.html">
+						<i class="iconfont">&#xe601;</i>
+						<p>零售</p>
+					</a>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 index-service-icon">
+					<a href="food_index.html">
+						<i class="iconfont">&#xe602;</i>
+						<p>餐馆</p>
+					</a>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 index-service-icon">
+					<a href="start_index.html">
+						<i class="iconfont">&#xe618;</i>
+						<p>起点</p>
+					</a>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 index-service-icon">
+					<a href="member.html">
+						<i class="iconfont">&#xe604;</i>
+						<p>我</p>
+					</a>
+				</div>
+			</div>
+		</div>
+    </div>
+
+	<div class="container details-ad">
+		<div class="row index-ad">
+			<a href="#" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 index-ad1 thumbnail">
+				<img src="images/index_1.jpg">
+				<p>分类广告位</p>
+			</a>
+			<a href="#" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 index-ad2 thumbnail">
+				<img src="images/index_1.jpg">
+				<p>零售宣传位</p>
+			</a>
+			<a href="#" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 index-ad3 thumbnail">
+				<img src="images/index_1.jpg">
+				<p>餐饮宣传位</p>
+			</a>
+			<a href="#" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 index-ad4 thumbnail">
+				<img src="images/index_1.jpg">
+				<p>起点社区宣传位</p>
+			</a>
+		</div>
+	</div>
+
+    <div class="container-fluid details-list">
+	    <div class="container">
+			<div class="row index-choose">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-list-choose">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid navbar-distance">
+							<span class="navbar-btn navbar-text">附近</span>
+							<a href="#" class="btn btn-default navbar-btn" id="distanceone">500m</a>
+							<a href="#" class="btn btn-default navbar-btn" id="distancetwo">1000m</a>
+							<a href="#" class="btn btn-default navbar-btn" id="distancethree">1500m</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="row index-list">
+				<a href="food_details.html" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-list-content">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/img_64.jpg" alt="...">
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">张妈台式锅烧
+								<span class="label distance-range">距离2km</span>
+							</h5>
+							<p class="business-hours">11:00-21:00</p>
+							<p>
+								<span class="label label-food">地方小吃</span>
+								<span class="label label-privilege">惠</span>
+							</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="food_details.html" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-list-content">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/img_64.jpg" alt="...">
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">陈雄记港式茶餐厅
+								<span class="label distance-range">距离2km</span>
+							</h5>
+							<p class="business-hours">11:00-21:00</p>
+							<p>
+								<span class="label label-food">中式快餐</span>
+								<span class="label label-privilege">惠</span>
+							</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="food_details.html" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-list-content">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/img_64.jpg" alt="...">
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">美宜佳便利店
+								<span class="label distance-range">距离2km</span>
+							</h5>
+							<p class="business-hours">11:00-21:00</p>
+							<p>
+								<span class="label label-retail">便利店</span>
+								<span class="label label-privilege">惠</span>
+							</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="food_details.html" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-list-content">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/img_64.jpg" alt="...">
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">张妈台式锅烧
+								<span class="label distance-range">距离2km</span>
+							</h5>
+							<p class="business-hours">11:00-21:00</p>
+							<p>
+								<span class="label label-food">地方小吃</span>
+								<span class="label label-privilege">惠</span>
+							</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="food_details.html" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 index-list-content">
+					<div class="media">
+						<div class="media-left">
+							<img class="media-object" src="images/img_64.jpg" alt="...">
+						</div>
+						<div class="media-body">
+							<h5 class="media-heading">张妈台式锅烧
+								<span class="label distance-range">距离2km</span>
+							</h5>
+							<p class="business-hours">11:00-21:00</p>
+							<p>
+								<span class="label label-food">地方小吃</span>
+								<span class="label label-privilege">惠</span>
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+    </div>
+
+	<div class="float-right">
+		<a href="map.html" class="map-icon"><i class="iconfont">&#xe612;</i></a>
+		<a href="#" class="suggest-icon" type="button" data-toggle="modal" data-target="#mySuggest"><i class="iconfont">&#xe60e;</i></a>
+
+		<!-- 建议反馈 -->
+		<form action="" method="post" name="mysuggest">
+			<div class="modal fade mySuggest" id="mySuggest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" id="myModalLabel">意见反馈</h4>
+						</div>
+						<div class="modal-body">
+							<!-- Single button -->
+							<select class="btn btn-default mysuggestsort" id="mysuggestsort">
+								<option class="btn" value ="0">建议类型</option>
+								<option value ="saab">商家信息纠错</option>
+								<option value="opel">活动信息纠错</option>
+								<option value="audi">投诉建议</option>
+							</select>
+							<span id="suggesttips" class="text-danger"></span>
+							<textarea id="suggestbox" class="form-control" rows="3"></textarea>
+							<span id="suggestboxtips" class="text-danger"></span>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button id="submit" type="button" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+    <footer>
+    	<p><a href="shop_signup.html" class="btn">商户登记</a> | <a href="signup.html" class="btn">用户注册</a> | <a class="btn" id="appcheck" type="button" data-toggle="modal" data-target="#myApp">移动版网站</a></p>
+    	<p>© 2015 My Company.</p>
+    </footer>
+	<!-- 移动版网站 -->
+	<form action="" method="post" name="mysuggest">
+		<div class="modal fade myApp" id="myApp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" id="imandroid">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">移动版网站</h4>
+					</div>
+					<div class="modal-body"> 
+						<p class="mylogo"><a href="http://downloadpkg.apicloud.com/app/download?path=/zip/78/04/78049672995cede54697aed92ef6e2ea.apk"><img src="images/mylogo.png"></a></p>
+						<p class="mylogodown"><a class="btn" href="http://downloadpkg.apicloud.com/app/download?path=/zip/78/04/78049672995cede54697aed92ef6e2ea.apk">下载快捷方式到手机</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+
+			$("#distanceone").addClass("active");
+			$("#distanceone").click(function(){
+				$("#distanceone").addClass("active");
+				$("#distancetwo").removeClass("active");
+				$("#distancethree").removeClass("active");
+			});
+			$("#distancetwo").click(function(){
+				$("#distancetwo").addClass("active");
+				$("#distanceone").removeClass("active");
+				$("#distancethree").removeClass("active");
+			});
+			$("#distancethree").click(function(){
+				$("#distancethree").addClass("active");
+				$("#distanceone").removeClass("active");
+				$("#distancetwo").removeClass("active");
+			});
+
+			$("#submit").click(function(){
+				//value=0 为空
+				var coun=$("#mysuggestsort").val();
+				if(coun == 0) {
+					$("#suggesttips").text("请选择建议类型!");
+					$("#mysuggestsort").attr("style","border:1px solid #cc0033;");
+				}else {
+					$("#suggesttips").text("");
+					$("#mysuggestsort").removeAttr("style");
+					$('#mySuggest').modal('hide');
+				}
+
+				if($("#suggestbox").val("")){
+					$("#suggestboxtips").text("请填写建议内容!");
+				}
+			});
+
+
+			var u = navigator.userAgent, app = navigator.appVersion;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+			$("#appcheck").click(function(){
+				if(isAndroid){
+					//alert("安卓机")
+				}else if(isiOS){
+					$("#myApp").attr("style","background-color: transparent;");
+					$("#imandroid").attr("style","display:none;");
+					$("#iosdesktop").attr("style","display:block;");
+					$("#iosdesktop").height($(window).height());
+					$("#iosdesktop").width($(window).width());
+				}
+			});
+			$("#myApp").click(function(){
+				$("#iosdesktop").removeAttr("style");
+			});
+		})
+    </script>
+  </body>
+</html>

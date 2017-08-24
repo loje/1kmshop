@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>一公里社区</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+		function onlyNum() {
+		    if(!(event.keyCode==46)&&!(event.keyCode==8)&&!(event.keyCode==37)&&!(event.keyCode==39))
+		    if(!((event.keyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)))
+		    event.returnValue=false;
+		}
+    </script>
+  </head>
+  <body class="signup-bg">
+	<div class="container-fluid food-top">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid food-top-but">
+					<div class="navbar-left">
+						<a href="javascript:history.go(-1)">
+							<i class="iconfont">&#xe607;</i>
+							<!-- <img src="images/index_logo.png">
+							<span>餐馆</span> -->
+						</a>
+					</div>
+					<div class="navbar-middle">
+						商户登记
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container-fluid shopsignup">
+		<form class="form-horizontal" id="shopSignup">
+			<div class="container shopsignup-basic">
+				<div class="page-header">
+					<h5>填写商家基本信息 <small>除<span class="label label-warning">选填项</span>外，其余为必填项</small></h5>
+				</div>
+				
+				<div class="form-group">
+					<label for="inputShopname" class="col-xs-12 col-sm-2 control-label">
+						商家名称
+					</label>
+					<div class="col-xs-12 col-sm-10">
+						<input type="text" class="form-control" id="shopname" name="shopname" placeholder="请输入商店的名字" >
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputPhone" class="col-xs-12 col-sm-2 control-label">
+						商家电话
+					</label>
+					<div class="col-xs-12 col-sm-10">
+						<input type="text" class="form-control" id="shopphone" name="shopphone" placeholder="请输入商店的联系电话"  onkeydown="onlyNum();">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputArea" class="col-xs-12 col-sm-2 control-label">所在区域</label>
+					<div class="col-xs-12 col-sm-10">
+						<select class="form-control" id="inputarea" name="inputarea">
+							<option>--请选择--</option>
+							<option>福田区</option>
+							<option>罗湖区</option>
+							<option>南山区</option>
+							<option>宝安区</option>
+							<option>龙岗区</option>
+							<option>盐田区</option>
+							<option>龙华新区</option>
+							<option>大鹏新区</option>
+							<option>光明新区</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="shopLocal" class="col-xs-12 col-sm-2 control-label">
+						商家地址
+					</label>
+					<div class="col-xs-12 col-sm-10">
+						<input type="text" class="form-control" id="shoplocal" name="shoplocal" placeholder="请输入商店的地址">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputShopname" class="col-xs-12 col-sm-2 control-label">
+						商店经纬度
+					</label>
+					<div class="col-xs-12 col-sm-10">
+						<input type="text" class="form-control" id="coordinate" name="coordinate" placeholder="请输入商店的经纬度" >
+					</div>
+					<div class="col-xs-12 col-sm-2"></div>
+					<div class="col-xs-12 col-sm-10 lbsapi panel panel-primary">
+						<p class="panel-heading">点击<a href="http://api.map.baidu.com/lbsapi/getpoint/" target="_black">百度地图拾取坐标系统</a>获取您店铺的经纬度</p>
+						<ul class="panel-body">
+							<li>1.进入<a href="http://api.map.baidu.com/lbsapi/getpoint/" target="_black">百度地图拾取坐标系统</a></li>
+							<li>2.在搜索框中输入您店铺的地址；</li>
+							<li>3.点击地图右侧您店铺所在的具体位置；</li>
+							<li>4.右上角“当前坐标点如下”就是您店铺所在地址，点击复制</li>
+							<li>5.把复制的经纬度填到上面的输入框</li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputSort" class="col-xs-12 col-sm-2 control-label">
+						商家分类
+					</label>
+					<div class="col-xs-6 col-sm-5">
+						<select class="form-control" id="inputsort1" name="inputsort1">
+							<option>-经营范围-</option>
+							<option>餐饮美食</option>
+							<option>零售超市</option>
+						</select>
+					</div>
+					<div class="col-xs-6 col-sm-5">
+						<select class="form-control" id="inputsort2" name="inputsort2">
+							<option>-经营种类-</option>
+							<option>中餐馆</option>
+							<option>西餐馆</option>
+							<option>自助餐</option>
+							<option>韩式料理</option>
+							<option>日式料理</option>
+							<option>东南亚菜/南亚菜</option>
+							<option>小吃/快餐</option>
+							<option>甜品/饮品</option>
+							<option>咖啡馆</option>
+							<option>茶馆</option>
+							<option>美食DIY</option>
+							<option>其他餐饮美食</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputLocal" class="col-xs-12 col-sm-2 control-label">
+						营业时间
+					</label>
+					<div class="col-xs-12 col-sm-10">
+						<label class="control-label">开始营业时间</label>
+						<input type="time" class="form-control" id="begintime" name="begintime">
+						<label class="control-label">结束营业时间</label>
+						<input type="time" class="form-control" id="endtime" name="endtime">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputService" class="col-xs-12 col-sm-2 control-label">
+						<span class="label label-warning">选填项</span>
+						店铺服务
+					</label>
+					<div class="col-xs-12 col-sm-10">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="shopservice" value="">
+								可配送/快递
+							</label>
+							<label>
+								<input type="checkbox" name="shopservice" value="">
+								24小时营业 / 营业到凌晨2点
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputIntro" class="col-xs-12 col-sm-2 control-label">
+						商家简介
+					</label>
+					<div class="col-xs-12 col-sm-10">
+						<textarea class="form-control" id="shopintro" name="shopintro" rows="3"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputShopicon" class="col-xs-12 col-sm-2 control-label">
+						商家图片
+					</label>
+					<div class="col-xs-12 col-sm-4 shop-icon">
+						<img id="shopiconPreview" class="thumbnail" alt="...">
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<input type="file" class="form-control" id="shopicon" name="shopicon" placeholder="请上传商铺的标志或图标">
+						<p class="shopicon-tips"><span class="label label-danger">上传图片长宽比为1：1，展示效果最佳！</span></p>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="inputShopicon" class="col-xs-12 col-sm-2 control-label">
+						商家营业执照
+					</label>
+					<div class="col-xs-12 col-sm-4 shop-icon">
+						<img id="licencePreview" class="thumbnail" alt="...">
+					</div>
+					<div class="col-xs-12 col-sm-6 ">
+						<input type="file" class="form-control" id="licence" name="licence" placeholder="请上传商铺的营业执照扫描件">
+						<p class="shopicon-tips"><span class="label label-danger">在此上传营业执照的扫描件</span></p>
+					</div>
+					<div class="col-xs-6 col-sm-3 licence-photo">
+						<img class="thumbnail" src="http://img.alicdn.com/tps/i2/TB1mk3PFVXXXXaGXVXXmsGX9VXX-661-900.jpg" alt="...">
+						<p>营业执照</p>
+					</div>
+					<div class="col-xs-6 col-sm-3 licence-photo">
+						<img class="thumbnail" src="http://img.alicdn.com/tps/i3/TB1pIQWFVXXXXayXFXXoE150FXX-744-528.jpg" alt="...">
+						<p>个体工商户营业执照</p>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="inputShopicon" class="col-xs-12 col-sm-2 control-label">
+						商家介绍页底部广告
+					</label>
+					<div class="col-xs-12 col-sm-4 shop-icon">
+						<img id="shopadPreview" class="thumbnail" alt="...">
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<input type="file" class="form-control" id="shopad" name="shopad" placeholder="请上传商铺的菜单或商品海报">
+						<p class="shopicon-tips"><span class="label label-danger">图片的卖点记得控制在图片中间，展示效果最佳！</span></p>
+					</div>
+				</div>
+
+				<p class="shop-signup-save">
+					<button type="reset" class="btn reset-shopinput">重置所有输入</button>
+					<input type="submit" class="btn btn-save sent-shopinput" value="提交申请">
+				</p>
+			</div>
+		</form>
+
+		<div class="float-right">
+			<a href="#" class="suggest-icon" type="button" data-toggle="modal" data-target="#mySuggest"><i class="iconfont">&#xe60e;</i></a>
+
+			<!-- 建议反馈 -->
+			<div class="modal fade mySuggest" id="mySuggest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">意见反馈</h4>
+						</div>
+						<div class="modal-body">
+							<!-- Single button -->
+							<div class="btn-group mysuggestsort">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									建议类型 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">商家信息纠错</a></li>
+									<li><a href="#">活动信息纠错</a></li>
+									<li><a href="#">投诉建议</a></li>
+								</ul>
+							</div>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<!-- <button type="button" class="btn btn-primary">提交</button> -->
+							<input type="submit" name="Submit" class="btn btn-primary" id="Submit" value="确认提交" onclick="check()" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <footer>
+    	<p><a href="shop_signup.html" class="btn">商户登记</a> | <a href="signup.html" class="btn">用户注册</a></p>
+    	<p>© 2015 My Company.</p>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/additional-methods.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+			$("#shopicon").on("change", function(){
+			    // Get a reference to the fileList
+			    var files = !!this.files ? this.files : [];
+			  
+			    // If no files were selected, or no FileReader support, return
+			    if (!files.length || !window.FileReader) return;
+			  
+			    // Only proceed if the selected file is an image
+			    if (/^image/.test( files[0].type)){
+			  
+			        // Create a new instance of the FileReader
+			        var reader = new FileReader();
+			  
+			        // Read the local file as a DataURL
+			        reader.readAsDataURL(files[0]);
+			  
+			        // When loaded, set image data as background of div
+			        reader.onloadend = function(){
+			   
+			       $("#shopiconPreview").css("background-image", "url("+this.result+")");
+			         $("#shopiconPreview").css("background-szie", "100%");
+			        }
+			  
+			    }
+			  
+			});
+
+			$("#licence").on("change", function(){
+			    // Get a reference to the fileList
+			    var files = !!this.files ? this.files : [];
+			  
+			    // If no files were selected, or no FileReader support, return
+			    if (!files.length || !window.FileReader) return;
+			  
+			    // Only proceed if the selected file is an image
+			    if (/^image/.test( files[0].type)){
+			  
+			        // Create a new instance of the FileReader
+			        var reader = new FileReader();
+			  
+			        // Read the local file as a DataURL
+			        reader.readAsDataURL(files[0]);
+			  
+			        // When loaded, set image data as background of div
+			        reader.onloadend = function(){
+			   
+			       $("#licencePreview").css("background-image", "url("+this.result+")");
+			         
+			        }
+			  
+			    }
+			  
+			});
+
+			$("#shopad").on("change", function(){
+			    // Get a reference to the fileList
+			    var files = !!this.files ? this.files : [];
+			  
+			    // If no files were selected, or no FileReader support, return
+			    if (!files.length || !window.FileReader) return;
+			  
+			    // Only proceed if the selected file is an image
+			    if (/^image/.test( files[0].type)){
+			  
+			        // Create a new instance of the FileReader
+			        var reader = new FileReader();
+			  
+			        // Read the local file as a DataURL
+			        reader.readAsDataURL(files[0]);
+			  
+			        // When loaded, set image data as background of div
+			        reader.onloadend = function(){
+			   
+			       $("#shopadPreview").css("background-image", "url("+this.result+")");
+			         
+			        }
+			  
+			    }
+			  
+			});
+
+
+    		$("#shopphone").keyup(function () {
+                //如果输入非数字，则替换为''，如果输入数字，则在每4位之后添加一个空格分隔
+                this.value = this.value.replace(/[^\d]/g, '');
+            })
+            $("#coordinate").keyup(function () {
+                //如果输入非数字，则替换为''，如果输入数字，则在每4位之后添加一个空格分隔
+                this.value = this.value.replace(/[^(\d||/.||/,)]/g, '');
+            })
+
+
+    		$("#shopSignup").validate({
+    			rules:{
+					shopname:{
+					//店铺名
+						required:true,
+					},
+    				shopphone:{
+    				//联系方式
+    					required:true,
+    					// minlength:8,
+    					// maxlength:13,
+    					digits:true,
+    					rangelength:[8,13]
+    				},
+    				shoplocal:{
+    					required:true
+    				},
+    				inputarea:{
+    					required:true,
+    					//inputarea:"inputarea"
+    				},
+    				coordinate:{
+    					required:true
+    				},
+    				inputsort1:{
+    					required:true,
+    					inputsort1:"inputsort1"
+    				},
+    				inputsort2:{
+    					required:true,
+    					inputsort2:"inputsort2"
+    				},
+    				begintime:{
+    					required:true
+    				},
+    				endtime:{
+    					required:true
+    				},
+    				shopintro:{
+    					required:true,
+    					minlength:10
+    				},
+    				shopicon:{
+    					required:true,
+    					//shopicon:"shopicon"
+    				},
+    				licence:{
+    					required:true
+    				},
+    				shopad:{
+    					required:true
+    				}
+
+    			},
+    			messages:{
+					shopname:{
+						required:"必须填写店铺名！"
+					},
+    				shopphone:{
+    					required:"电话号码的格式错误",
+    					digits:"电话号码的格式错误",
+    					// minlength:"电话号码最小为8位",
+    					// maxlength:"电话号码最大为13位"
+    					rangelength:"电话号码位数应该在8到13位"
+    				},
+    				shoplocal:{
+    					required:"必须填写商铺地址！"
+    				},
+    				coordinate:{
+    					required:"必须要填写经纬度，顾客才能在我们的地图上找到你！"
+    				},
+    				begintime:{
+    					required:"忘了输入开始营业时间"
+    				},
+    				endtime:{
+    					required:"忘了输入打烊的时间"
+    				},
+    				shopintro:{
+    					required:"忘了输入店铺的介绍",
+    					minlength:"介绍的字数太少了！"
+    				},
+					shopicon:{
+    					required:"请上传商铺的标志或图标",
+    					shopicon:"shopicon"
+    				},
+    				licence:{
+    					required:"请上传商铺的营业执照扫描件，我们需要验证您的运营资质",
+    					licence:"licence"
+    				},
+    				shopad:{
+    					required:"请上传商铺的菜单或商品海报",
+    					licence:"licence"
+    				}
+    			}
+    		})
+    		$.validator.addMethod("inputarea",function(value,elements){
+    			if(value=""){
+    				return false
+    			}
+    		},"请选择店铺所在地区"),
+    		$.validator.addMethod("inputsort1",function(value,elements){
+    			if(value=""){
+    				return false
+    			}
+    		},"请选择经营范围"),
+
+
+
+    		$.validator.addMethod("inputsort2",function(value,elements){
+    			if(value=""){
+    				return false
+    			}
+    		},"请选择经营种类"),
+    		$.validator.addMethod("shopicon",function(value,elements){
+    			if(value=""){
+    				return false
+    			}
+    		},"请上传商铺的标志或图标")
+    		$.validator.addMethod("licence",function(value,elements){
+    			if(value=""){
+    				return false
+    			}
+    		},"请上传商铺的营业执照扫描件，我们需要验证您的运营资质")
+    		$.validator.addMethod("shopad",function(value,elements){
+    			if(value=""){
+    				return false
+    			}
+    		},"请上传商铺的菜单或商品海报")
+    	})
+    </script>
+  </body>
+</html>

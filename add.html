@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>添加商品</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/mine.css" type="text/css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="page-header">
+              <h5>当前位置是：添加文章</h5>
+            </div>
+        </div>
+
+        <div class="container">
+            <form class="form-horizontal" action="./admin.php?c=goods&a=add" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">文章标题</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="请填写文章标题">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">所属板块</label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option>请选择</option>
+                            <option>首页-今日快讯</option>
+                            <option>首页-成长健康</option>
+                            <option>首页-早期教育</option>
+                        </select>
+                    </div>
+                </div>   
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">编辑人</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="文章作者或者出处">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">文章缩略图</label>
+                    <div class="col-sm-10">
+                        <div class="media">
+                            <div class="media-left">
+                                <img class="media-object" src="..." alt="..." style="width:50px; height:50px; ">
+                            </div>
+                            <div class="media-body">
+                                <input type="file" id="exampleInputFile">
+                                <p class="help-block">Example block-level help text here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">正文</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="10"></textarea>
+                    </div>
+                </div>
+                <p style="text-align: right;">
+                    <button type="reset" class="btn" style="background-color:transparent; color:#666;font-size:12px;">重置所有输入</button>
+                    <input type="submit" class="btn btn-default" value="提交" style="width:30%; height:40px; background-color:#333; color:#ccc; border:none;">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

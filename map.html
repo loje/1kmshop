@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>一公里社区</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--百度地图-->
+		<script type="text/javascript">
+        setTimeout(function(){  
+            document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px';  
+        },20);   
+
+
+		function initialize() {  
+		  var mp = new BMap.Map('map');  
+		  mp.centerAndZoom(new BMap.Point(121.491, 31.233), 11);  
+		}  
+		   
+		function loadScript() {  
+		  var script = document.createElement("script");  
+		  script.src = "http://api.map.baidu.com/api?v=1.5&ak=15QgiRTajH4VS838WAciqNhG&callback=initialize";//此为v1.5版本的引用方式  
+		  // http://api.map.baidu.com/api?v=1.5&ak=15QgiRTajH4VS838WAciqNhG&callback=initialize"; //此为v1.4版本及以前版本的引用方式  
+		  document.body.appendChild(script);  
+		}  
+		   
+		window.onload = loadScript;  
+		</script>
+  </head>
+  <body>
+	<div class="container map-navbar">
+		<nav class="navbar navbar-default map-navbar-bg">
+		  <div class="container-fluid map-navbar-but">
+				<a href="#" class="btn btn-default navbar-btn active">可送货</a>
+				<a href="#" class="btn btn-default navbar-btn">有优惠活动</a>
+				<a href="javascript:history.go(-1)" class="btn btn-default navbar-btn navbar-right">
+					<i class="iconfont">&#xe605;</i>
+				</a>
+		  </div>
+		</nav>
+	</div>
+  	<div id="map" class="container-fluid" style="width:100%;height:100%;"></div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

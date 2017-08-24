@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>一公里社区</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+	<div class="container-fluid food-top">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid food-top-but">
+					<div class="navbar-left">
+						<a href="javascript:history.go(-1)">
+							<i class="iconfont">&#xe607;</i>
+							<!-- <img src="images/index_logo.png">
+							<span>餐馆</span> -->
+						</a>
+					</div>
+					<div class="navbar-middle">
+						结算页面
+					</div>
+					<!-- <div class="navbar-right">
+						<a href=""><i class="iconfont">&#xe604;</i></a>
+					</div> -->
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container settlement-page">
+		<!-- <a href="#" class="container address-bar">
+			<div class="navbar-left recipient">杨二车娜姆</div>
+			<div class="navbar-left consignee-address">广东省 深圳市 罗湖区 <br />港联路20-1号</div>
+			<div class="navbar-right other-address"><i class="iconfont">&#xe60a;</i></div>
+		</a> -->
+		<div class="page-header pickup-title">
+			<h5>店铺信息</h5>
+		</div>
+		<div class="media pickup-details-page">
+			<div class="media-left pickup-details-img">
+				<img class="media-object" src="..." alt="...">
+			</div>
+			<div class="media-body pickup-details-top">
+				<h5 class="media-heading">深圳市罗湖区港莲路20-1号</h5>
+				<p>7-ELEVEN</p>
+			</div>
+		</div>
+
+
+		<div class="container settlement-goods-list">
+			<div class="row settlement-goods">
+				<div class="col-xs-12 col-sm-8 col-md-8 settlement-goods-name">收集印花，换购复联2马克杯</div>
+				<div class="col-xs-7 col-sm-2 col-md-2 settlement-goods-quantity">
+					数量：5
+				</div>
+				<div class="col-xs-5 col-sm-2 col-md-2 settlement-goods-price">￥299.00</div>
+			</div>
+		</div>
+
+		<div class="container settlement-distribution">
+			<div class="distribution-info row">
+				<div class="col-xs-3 col-sm-2 col-md-1 ">
+					<div class="distribution-info-title">配送相关</div>
+				</div>
+				<div class="col-xs-9 col-sm-10 col-md-11">
+					<div class="distribution-info-chiose">是否配送</div>
+					<label class="radio-inline">
+					  <input type="radio" name="inlineRadioOptions" id="distributionYes" value="distributionYes"> 是
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="inlineRadioOptions" id="distributionNo" value="distributionNo" checked> 否
+					</label>
+				</div>
+			</div>
+			<div class="distribution-info-chiose row" id="distributionChiose">
+				<div class="col-xs-3 col-sm-2 col-md-1"></div>
+				<div class="col-xs-9 col-sm-10 col-md-11">
+					<div class="distribution-info-time">配送时间：<input type="datetime" class="form-control" placeholder="请告诉我们您期望的配送具体几月几日和时间"></div>
+				</div>
+				<div class="col-xs-3 col-sm-2 col-md-1"></div>
+				<div class="col-xs-9 col-sm-10 col-md-11 user-local">
+					<div class="distribution-info-time">您的地址：罗湖区港莲路20-1号</div>
+					<div class="change-user-local"><a href="member_info.html">地址不对？</a></div>
+				</div>
+				<div class="col-xs-3 col-sm-2 col-md-1"></div>
+				<div class="col-xs-9 col-sm-10 col-md-11">
+					<textarea class="form-control distribution-info-message" rows="3" placeholder="配送注意事项"></textarea>
+					<p class="distribution-tips">提示：我们会把您的配送请求，转告提供配送服务的店家，本站不直接提供配送业务。<br />假如你急需此商品，可直接电话联系该商户。</p>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="container settlement-message">
+			<textarea class="form-control" rows="3" placeholder="给店家留言"></textarea>
+		</div>
+
+		<div class="container settlement-payment">
+			<div class="page-header">
+				<h5>选择支付方式</h5>
+			</div>
+
+			<div class="radio">
+				<label id="alipayradio">
+					<input type="radio" name="optionsRadios" id="alipay" value="alipay" >
+					<div class="alipay">
+						<i class="iconfont">&#xe611;</i>
+						<p>支付宝钱包</p>
+					</div>
+				</label>
+			</div>
+			<div class="radio">
+				<label id="tenpayradio">
+					<input type="radio" name="optionsRadios" id="tenpay" value="tenpay">
+					<div class="tenpay">
+						<i class="iconfont">&#xe610;</i>
+						<p>财付通支付</p>
+					</div>
+				</label>
+			</div>
+
+			<input id="payit" class="btn btn-default payit" type="submit" value="提交选择"  data-toggle="modal" data-target="#payitbox">
+			<!-- Modal -->
+			<div class="modal fade" id="payitbox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">支付进行中</h4>
+			      </div>
+			      <div class="modal-body">
+			        <p>请在弹出的新页面中完成支付！</p>
+			      </div>
+			      <div class="modal-footer">
+			      	<input type="button" class="btn btn-primary" data-dismiss="modal" value="支付失败？">
+			        <input onclick="window.open('result_page.html');" type="button" class="btn btn-default" value="支付成功">
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+		
+
+
+		<div class="float-right">
+			<!-- <a href="map.html" class="map-icon"><i class="iconfont">&#xe612;</i></a> -->
+			<a href="#" class="suggest-icon" type="button" data-toggle="modal" data-target="#mySuggest"><i class="iconfont">&#xe60e;</i></a>
+
+			<!-- 建议反馈 -->
+			<div class="modal fade mySuggest" id="mySuggest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">意见反馈</h4>
+						</div>
+						<div class="modal-body">
+							<!-- Single button -->
+							<div class="btn-group mysuggestsort">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									建议类型 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">商家信息纠错</a></li>
+									<li><a href="#">活动信息纠错</a></li>
+									<li><a href="#">投诉建议</a></li>
+								</ul>
+							</div>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <footer>
+    	<p><a href="shop_signup.html" class="btn">商户登记</a> | <a href="signup.html" class="btn">用户注册</a></p>
+    	<p>© 2015 My Company.</p>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#distributionChiose").hide();
+			$("#distributionNo").click(function(){
+				$("#distributionChiose").hide();
+			});
+			$("#distributionYes").click(function(){
+				$("#distributionChiose").show();
+			});
+
+			$("#payit").attr("disabled", true);
+			$("#alipay").click(function(){
+				$("#alipay").attr("checked",true);
+				$("#tenpay").removeAttr("checked");
+				$("#payit").attr("disabled", false);
+			});
+			$("#tenpay").click(function(){
+				$("#tenpay").attr("checked");
+				$("#alipay").removeAttr("checked",true);
+				$("#payit").attr("disabled", false);
+			});
+
+
+			
+			// if($("#tenpay"[type=radio])){
+
+			// }
+
+
+		});
+	</script>
+  </body>
+</html>

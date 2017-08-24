@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>一公里社区</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--百度地图-->
+	<script type="text/javascript">
+		// setTimeout(function(){  
+		// 	document.getElementsByTagName('body')[0].style.height = window.innerHeight+'px';  
+		// },20);
+
+
+		function initialize() {  
+		  var mp = new BMap.Map('map');  
+		  mp.centerAndZoom(new BMap.Point(121.491, 31.233), 11);  
+		}  
+		   
+		function loadScript() {  
+		  var script = document.createElement("script");  
+		  script.src = "http://api.map.baidu.com/api?v=1.5&ak=15QgiRTajH4VS838WAciqNhG&callback=initialize";//此为v1.5版本的引用方式  
+		  // http://api.map.baidu.com/api?v=1.5&ak=15QgiRTajH4VS838WAciqNhG&callback=initialize"; //此为v1.4版本及以前版本的引用方式  
+		  document.body.appendChild(script);  
+		}  
+		   
+		window.onload = loadScript;  
+	</script>
+  </head>
+  <body>
+ 	<div class="container-fluid food-top">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid food-top-but">
+					<div class="navbar-left">
+						<a href="javascript:history.go(-1)">
+							<i class="iconfont">&#xe607;</i>
+							<!-- <img src="images/index_logo.png">
+							<span>餐馆</span> -->
+						</a>
+					</div>
+					<div class="navbar-middle">
+						订单详情
+					</div>
+					<!-- <div class="navbar-right">
+						<a href=""><i class="iconfont">&#xe604;</i></a>
+					</div> -->
+				</div>
+			</nav>
+		</div>
+	</div>
+  	<div class="jumbotron loacl-map">
+  		<div class="member-user">
+			<a href="member_info.html" class="thumbnail">
+				<img src="images/portrait.png" alt="...">
+				<div class="caption">
+					<h4>唐家三少<i class="iconfont">&#xe613;</i></h4>
+					<!-- <p>在你家一公里附近有36家商铺</p> -->
+				</div>
+			</a>
+  		</div>
+  		<div id="map" class="container-fluid" style="width:100%;height:100%;"></div>
+  	</div>
+
+	<div class="container order">
+		<div class="page-header">
+			<h5>我的订单</h5>
+			<div class="order-quantity">共28个订单</div>
+		</div>
+
+		<a href="result_page.html" class="media order-list">
+			<div class="media-body order-list-left">
+				<p class="order-title">集印花，换购复联Ⅱ马克杯集印花，换购复联Ⅱ马克杯</p>
+				<p class="shop-info">7-SEVEN | 深圳市罗湖区港莲路20-1号</p>
+			</div>
+			<div class="media-right order-list-right">
+				<div class="order-prise">$29.9</div>
+				<div class="order-date">2015.06.03 20:48</div>
+			</div>
+		</a>
+
+		<a href="result_page.html" class="media order-list">
+			<div class="media-body order-list-left">
+				<p class="order-title">集印花，换购复联Ⅱ马克杯集印花，换购复联Ⅱ马克杯</p>
+				<p class="shop-info">7-SEVEN | 深圳市罗湖区港莲路20-1号</p>
+			</div>
+			<div class="media-right order-list-right">
+				<div class="order-prise">$29.9</div>
+				<div class="order-date">2015.06.03 20:48</div>
+			</div>
+		</a>
+
+		<a href="result_page.html" class="media order-list">
+			<div class="media-body order-list-left">
+				<p class="order-title">集印花，换购复联Ⅱ马克杯集印花，换购复联Ⅱ马克杯</p>
+				<p class="shop-info">7-SEVEN | 深圳市罗湖区港莲路20-1号</p>
+			</div>
+			<div class="media-right order-list-right">
+				<div class="order-prise">$29.9</div>
+				<div class="order-date">2015.06.03 20:48</div>
+			</div>
+		</a>
+
+		<a href="result_page.html" class="media order-list">
+			<div class="media-body order-list-left">
+				<p class="order-title">集印花，换购复联Ⅱ马克杯集印花，换购复联Ⅱ马克杯</p>
+				<p class="shop-info">7-SEVEN | 深圳市罗湖区港莲路20-1号</p>
+			</div>
+			<div class="media-right order-list-right">
+				<div class="order-prise">$29.9</div>
+				<div class="order-date">2015.06.03 20:48</div>
+			</div>
+		</a>
+
+		<a href="result_page.html" class="media order-list">
+			<div class="media-body order-list-left">
+				<p class="order-title">集印花，换购复联Ⅱ马克杯集印花，换购复联Ⅱ马克杯</p>
+				<p class="shop-info">7-SEVEN | 深圳市罗湖区港莲路20-1号</p>
+			</div>
+			<div class="media-right order-list-right">
+				<div class="order-prise">$29.9</div>
+				<div class="order-date">2015.06.03 20:48</div>
+			</div>
+		</a>
+
+		<nav class="order-pagination">
+			<ul class="pagination">
+				<li class="disabled">
+					<span>
+						<span aria-hidden="true">&laquo;</span>
+					</span>
+				</li>
+				<li class="active">
+					<span>1</span>
+				</li>
+				<li>
+					<span>2</span>
+				</li>
+				<li>
+					<span>3</span>
+				</li>
+				<li>
+					<span>4</span>
+				</li>
+				<li>
+					<span>5</span>
+				</li>
+				<li>
+					<span>
+						&raquo;
+					</span>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+
+	<div class="float-right">
+		<a href="map.html" class="map-icon"><i class="iconfont">&#xe612;</i></a>
+		<a href="#" class="suggest-icon" type="button" data-toggle="modal" data-target="#mySuggest"><i class="iconfont">&#xe60e;</i></a>
+
+		<!-- 建议反馈 -->
+		<div class="modal fade mySuggest" id="mySuggest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">意见反馈</h4>
+					</div>
+					<div class="modal-body">
+						<!-- Single button -->
+						<div class="btn-group mysuggestsort">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								建议类型 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">商家</a></li>
+								<li><a href="#">平台</a></li>
+							</ul>
+						</div>
+						<textarea class="form-control" rows="3"></textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <footer>
+    	<p><a href="shop_signup.html" class="btn">商户登记</a> | <a href="signup.html" class="btn">用户注册</a></p>
+    	<p>© 2015 My Company.</p>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

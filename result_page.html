@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>一公里社区</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="container-fluid food-top">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid food-top-but">
+					<div class="navbar-left">
+						<a href="javascript:history.go(-1)">
+							<i class="iconfont">&#xe607;</i>
+							<!-- <img src="images/index_logo.png">
+							<span>餐馆</span> -->
+						</a>
+					</div>
+					<div class="navbar-middle">
+						订单详情
+					</div>
+					<!-- <div class="navbar-right">
+						<a href=""><i class="iconfont">&#xe604;</i></a>
+					</div> -->
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container result-page">
+		<div class="row result-order">
+			<div class="col-xs-12 col-sm-12 col-md-12 result-order-title">
+				<h5>订单兑换号</h5>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 result-order-number">
+				<p>SZ191265481</p>
+				<h5>凭此订单号到指定门店可购买相关活动商品！</h5>
+			</div>
+		</div>
+
+		<div class="page-header">
+			<h5>活动信息</h5>
+		</div>
+		<div class="container food-details-activity">
+			<a href="store_activity.html">满188元打9折<i class="iconfont">&#xe60a;</i></a>
+		</div>
+
+		<div class="page-header pickup-title">
+			<h5>店铺信息</h5>
+		</div>
+		<div class="media pickup-details-page">
+			<div class="media-left pickup-details-img">
+				<img class="media-object" src="..." alt="...">
+			</div>
+			<div class="media-body pickup-details-top">
+				<h5 class="media-heading">深圳市罗湖区港莲路20-1号</h5>
+				<p>7-ELEVEN</p>
+			</div>
+		</div>
+
+		<div class="float-right">
+			<a href="map.html" class="map-icon"><i class="iconfont">&#xe612;</i></a>
+			<a href="#" class="suggest-icon" type="button" data-toggle="modal" data-target="#mySuggest"><i class="iconfont">&#xe60e;</i></a>
+
+			<!-- 建议反馈 -->
+			<div class="modal fade mySuggest" id="mySuggest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">意见反馈</h4>
+						</div>
+						<div class="modal-body">
+							<!-- Single button -->
+							<div class="btn-group mysuggestsort">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									建议类型 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">商家信息纠错</a></li>
+									<li><a href="#">活动信息纠错</a></li>
+									<li><a href="#">投诉建议</a></li>
+								</ul>
+							</div>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container-fluid result-page-tips">
+		<div class="container line-through">
+			<fieldset>
+				<legend>特别提示
+				</legend>
+			</fieldset>
+			<ul>
+				<li>请至少提前1天致电酒店预约</li>
+				<li>退款请登录团购供应商（艺龙、携程）网站或app提交申请</li>
+				<li>团购密码一旦验证即代表消费成功，此时不支持申请“随时退款”和“过期退款”</li>
+			</ul>
+		</div>
+</div>
+
+
+
+    <footer>
+    	<p><a href="shop_signup.html" class="btn">商户登记</a> | <a href="signup.html" class="btn">用户注册</a></p>
+    	<p>© 2015 My Company.</p>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

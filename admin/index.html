@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta content="MSHTML 6.00.6000.16674" name="GENERATOR" />
+
+		<title>用户登录</title>
+
+		<!-- <link href="{:C('PUBLIC_ADMIN')}css/User_Login.css" type="text/css" rel="stylesheet" /> -->
+
+		<!-- Bootstrap -->
+		<link href="{:C('PUBLIC_ADMIN')}css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<script src="{:C('PUBLIC_ADMIN')}js/jquery.min.js"></script>
+	</head>
+<!--     <body id="userlogin_body">
+		<div id="user_login">
+			<dl>
+				<dd id="user_main">
+					<form action="{:U('User/login')}" method="post">
+						<ul>
+							<li class="user_main_c">
+								<div class="user_main_box">
+									<ul>
+										<li class="user_main_text">用户名： </li>
+										<li class="user_main_input">
+											<input class="TxtUserNameCssClass" id="admin_user" maxlength="20" name="admin_user"> </li></ul>
+									<ul>
+										<li class="user_main_text">密码： </li>
+										<li class="user_main_input">
+											<input class="TxtPasswordCssClass" id="admin_psd" name="admin_psd" type="password">
+										</li>
+									</ul>
+									<ul>
+										<li class="user_main_text">验证码： </li>
+										<li class="user_main_input">
+											<input class="TxtValidateCodeCssClass" id="captcha" name="captcha" type="text">
+											
+										</li>
+										
+									</ul>
+									<ul>
+										<li>
+											<div id="container">
+												<img src="{:U('User/verify')}"  title="点击刷新" style="width:120px;height:40px;"/>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="user_main_r">
+								<input style="border: medium none; background: url('{:C('PUBLIC_ADMIN')}/img/user_botton.gif') repeat-x scroll left top transparent; height: 122px; width: 111px; display: block; cursor: pointer;" value="" type="submit">
+							</li>
+						</ul>
+					</form>
+				</dd>
+			</dl>
+		</div>
+		<span id="ValrUserName" style="display: none; color: red;"></span>
+		<span id="ValrPassword" style="display: none; color: red;"></span>
+		<span id="ValrValidateCode" style="display: none; color: red;"></span>
+		<div id="ValidationSummary1" style="display: none; color: red;"></div>
+	</body> -->
+
+	<body>
+		<div class="container">
+			<form action="{:U('User/login')}" method="post" class="form-inline">
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">用户</span>
+						<input class="form-control"  id="admin_user" maxlength="20" name="admin_user" placeholder="用户名">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">密码</span>
+						<input class="form-control"  id="admin_psd" name="admin_psd" type="password" placeholder="密码">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">验证码</span>
+						<input class="form-control"  id="captcha" name="captcha" type="text" placeholder="验证码">
+					</div>
+					<div id="container">
+						<img src="{:U('User/verify')}" title="点击刷新" style="width:120px;height:40px;"/>
+					</div>
+				</div>
+
+				<input type="submit" class="btn btn-default" value="LOGIN!">
+			</form>
+		</div>
+
+		<span id="ValrUserName" style="display: none; color: red;"></span>
+		<span id="ValrPassword" style="display: none; color: red;"></span>
+		<span id="ValrValidateCode" style="display: none; color: red;"></span>
+		<div id="ValidationSummary1" style="display: none; color: red;"></div>
+	</body>
+</html>
+
+
+<script type="text/javascript">
+	var captcha_img = $('#container').find('img');
+	var verifyimg = captcha_img.attr("src");
+	captcha_img.attr('title', '点击刷新');  
+	captcha_img.click(function(){  
+		if( verifyimg.indexOf('?')>0){  
+			$(this).attr("src", verifyimg+'&random='+Math.random());  
+		}else{  
+			$(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());  
+		}  
+	});  
+</script>

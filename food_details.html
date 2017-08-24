@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>一公里社区</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class="container-fluid food-top">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid food-top-but">
+					<div class="navbar-left">
+						<a href="javascript:history.go(-1)">
+							<i class="iconfont">&#xe607;</i>
+							<!-- <img src="images/index_logo.png">
+							<span>餐馆</span> -->
+						</a>
+					</div>
+					<div class="navbar-middle">
+						详情
+					</div>
+					<!-- <div class="navbar-right">
+						<a href=""><i class="iconfont">&#xe604;</i></a>
+					</div> -->
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container food-page">
+		<div class="container food-details-page">
+			<div class="media">
+				<div class="media-left food-details-img">
+					<img class="media-object" src="..." alt="...">
+				</div>
+				<div class="media-body food-details-top">
+					<h5 class="media-heading">非常螺狮粉</h5>
+					<p>地方小吃</p>
+					<span>距离2km</span>
+					<span class="right-praise">
+						<a href="#" id="likeit" class=""><i class="iconfont">&#xe609;</i><span id="addone">0</span></a>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-header">
+			<h5>活动信息</h5>
+		</div>
+		<div class="container food-details-activity">
+			<a href="store_activity.html">满188元打9折<i class="iconfont">&#xe60a;</i></a>
+		</div>
+
+		<div class="page-header">
+			<h5>店铺信息</h5>
+		</div>
+		<div class="container food-details-info">
+			<p><i class="iconfont">&#xe60b;</i>0755-25647364</p>
+			<p><i class="iconfont">&#xe60d;</i>00:00-24:00</p>
+			<p><i class="iconfont">&#xe60c;</i>罗湖区港莲路20-1号</p>
+		</div>
+
+		<div class="container shop-details-ad">
+			<div class="row shop-ad">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 shop-ad-img">
+					<p>商铺广告位</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="float-right">
+			<a href="map.html" class="map-icon"><i class="iconfont">&#xe612;</i></a>
+			<a href="#" class="suggest-icon" type="button" data-toggle="modal" data-target="#mySuggest"><i class="iconfont">&#xe60e;</i></a>
+
+			<!-- 建议反馈 -->
+			<div class="modal fade mySuggest" id="mySuggest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">意见反馈</h4>
+						</div>
+						<div class="modal-body">
+							<!-- Single button -->
+							<div class="btn-group mysuggestsort">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									建议类型 <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#">商家信息纠错</a></li>
+									<li><a href="#">活动信息纠错</a></li>
+									<li><a href="#">投诉建议</a></li>
+								</ul>
+							</div>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <footer>
+    	<p><a href="shop_signup.html" class="btn">商户登记</a> | <a href="signup.html" class="btn">用户注册</a></p>
+    	<p>© 2015 My Company.</p>
+    </footer>
+
+	<input type="hidden" value="" id="likeState">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	  $("#likeit").click(function() {
+	  		if( $("#likeState").val() == ""){
+		  	var num = parseInt($("#addone").text());
+		    $("#addone").text(num+1);
+		    $("#likeState").val("a"); //如果这个隐藏域有值，则不再让用户继续点击
+			}
+	  });
+	});
+	</script>
+  </body>
+</html>
